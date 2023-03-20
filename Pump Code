@@ -9,15 +9,6 @@ void setup() {
   pinMode(RELAY_PIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(RELAY_PIN, HIGH); // turn on pump for 5 seconds
-  Serial.println("ON");
-  delay(500);
-  digitalWrite(RELAY_PIN, LOW);  // turn off pump for 5 seconds
-  Serial.println("OFF");
-  delay(500);
-}
 
 
 #define sensorPower 4
@@ -30,6 +21,20 @@ void setup() {
   digitalWrite(sensorPower, LOW);
   
   Serial.begin(9600);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(RELAY_PIN, HIGH); // turn on pump for 5 seconds
+  Serial.println("ON");
+  delay(500);
+  digitalWrite(RELAY_PIN, LOW);  // turn off pump for 5 seconds
+  Serial.println("OFF");
+  delay(500);
+}
+
+void pumpWater() {
+  
 }
 
 void loop() {
